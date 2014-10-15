@@ -41,11 +41,30 @@ describe('RockPaperScissors', function() {
 			expect(game.decideWinnerOf(rock, rock)).toEqual("Draw")
 		});
 
+		it('scissors draws with scissors', function() {
+			expect(game.decideWinnerOf(scissors, scissors)).toEqual("Draw")
+		});
 
+		it('Scissors beats paper', function() {
+			expect(game.decideWinnerOf(scissors, paper)).toEqual("Scissors")
+		});
 
+		it('Paper gets beaten by scissors', function() {
+			expect(game.decideWinnerOf(paper, scissors)).toEqual("Scissors")
+		});
 
+		it('paper draws with paper', function() {
+			expect(game.decideWinnerOf(paper, paper)).toEqual("Draw")
+		});
+
+		it('Paper beats rock', function() {
+			expect(game.decideWinnerOf(paper, rock)).toEqual("Paper")
+		});
+
+		it('Rock gets beaten by paper', function() {
+			expect(game.decideWinnerOf(rock, paper)).toEqual("Paper")
+		});
 
 	});
-
 
 });
