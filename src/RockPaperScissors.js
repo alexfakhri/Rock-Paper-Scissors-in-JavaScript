@@ -12,7 +12,7 @@ function Paper() {
 
 function Scissors() {
 	this.type = "Scissors";
-	this.beats = "Paper";
+	this.beats = "Paper"; 
 };
 
 RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
@@ -22,7 +22,6 @@ RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 			return gestureOne.type;
 	else 
 			return gestureTwo.type;
-		
 };
 
 
@@ -30,3 +29,27 @@ RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 // 			return gestureOne.type;
 // 	else 
 // 		return gestureTwo.type;
+
+//def vesus
+//	other === rock draw
+//	other === paper paper
+//	rock
+//end
+
+//return choiceOne.versus(choiceTwo)
+
+//function.Rules() {
+//foo = { 'Rock' : 'Scissors' }
+
+
+
+
+
+
+
+
+
+
+
+
+
