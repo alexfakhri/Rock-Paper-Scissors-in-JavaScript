@@ -6,7 +6,7 @@ function Player() {
 
 function Computer() {
 	this.gestures = [ new Rock, new Paper, new Scissors]
-
+	this.chosenGesture = null
 };
 
 function Rock() {
@@ -39,6 +39,17 @@ Player.prototype.choiceToFunction = function(gesture) {
 	if (gesture === "Scissors") return this.choice = new Scissors();
 };
 
+Computer.prototype.getComputerGesture = function() {
+	this.chosenGesture = this.gestures[Math.floor(Math.random() * this.gestures.length)]
+	return this.chosenGestures;
+
+};
+
+// var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
+// var pickAFruit = function () {
+// var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
+// return todaysFruit;
+// var item = items[Math.floor(Math.random()*items.length)];
 
 // else if (gestureOne.type === "Rock") 
 // 			return gestureOne.type;

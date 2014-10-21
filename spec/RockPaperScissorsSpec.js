@@ -101,18 +101,27 @@ describe('Player playing rock, paper, scissors', function() {
 
 	});
 
+});
+
 describe('Computer to be able to choose a random gesture', function() {
 
-		it('should have three gestures to be able to pick from', function() {
+		beforeEach(function() {
 			computer = new Computer
+		});
+
+		it('should have three gestures to be able to pick from', function() {
 			expect(computer.gestures.length).toEqual(3)
 		});
 
-
-
-});
-
-
-
+		it('should be able to pick a gesture at random', function() {
+			computer.getComputerGesture();
+			expect(computer.chosenGesture).toBeDefined()
+		});
 
 });
+
+
+
+
+
+
