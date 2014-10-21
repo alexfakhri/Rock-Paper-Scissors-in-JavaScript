@@ -1,0 +1,19 @@
+h1 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+	text-align: center;
+}
+
+img {
+	opacity: 0.5;
+	cursor: pointer;
+	transition: opacity 0.5s ease;
+
+
+}
+
+img:hover {
+	opacity: 1;
+}
+

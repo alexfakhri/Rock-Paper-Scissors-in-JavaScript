@@ -1,10 +1,13 @@
 describe('RockPaperScissors', function() {
 
+	var player1, player2, game;
+
 	beforeEach(function () {
 		rock = new Rock;
 		paper = new Paper;
 		scissors = new Scissors		
 	});
+
 
 
 	describe('gestures', function() {
@@ -64,7 +67,41 @@ describe('RockPaperScissors', function() {
 		it('Rock gets beaten by paper', function() {
 			expect(game.decideWinnerOf(rock, paper)).toEqual("Paper")
 		});
+	});
+
+});
+
+describe('Player playing rock, paper, scissors', function() {
+
+	describe('Should be able to select a gesture', function() {
+
+		beforeEach(function() {
+			player = new Player();
+		});
+
+		it('should generate a new instance of the  rock gesture passed to it', function() {
+			player.choiceToFunction("Rock")
+			expect(player.choice.type).toEqual("Rock")
+		});
+
+		it('should generate a new instance of the paper gesture passed to it', function() {
+			player.choiceToFunction("Paper")
+			expect(player.choice.type).toEqual("Paper")
+		});
+
+		it('should generate a new instance of the scissors gesture passed to it', function() {
+			player.choiceToFunction("Scissors")
+			expect(player.choice.type).toEqual("Scissors")
+		});
+
+		it('Should not generate a new instance if a random string is passed', function() {
+			player.choiceToFunction("Something")	
+			expect(player.choice).toBe(null)
+		});
 
 	});
+
+
+
 
 });
