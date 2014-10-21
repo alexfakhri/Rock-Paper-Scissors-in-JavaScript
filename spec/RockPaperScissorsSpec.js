@@ -5,10 +5,11 @@ describe('RockPaperScissors', function() {
 	beforeEach(function () {
 		rock = new Rock;
 		paper = new Paper;
-		scissors = new Scissors		
+		scissors = new Scissors;
+		game = new RockPaperScissors;
+		player = new Player;
+		computer = new Computer;	
 	});
-
-
 
 	describe('gestures', function() {
 
@@ -28,44 +29,41 @@ describe('RockPaperScissors', function() {
 
 	describe('rules of the game', function () {
 			
-			beforeEach(function() {
-				game = new RockPaperScissors
-			});
 
 		it('rock beats scissors', function() {
-			expect(game.decideWinnerOf(rock, scissors)).toEqual("Rock")
+			expect(game.decideWinnerOf(rock, scissors)).toEqual("You win!!!")
 		});
 
 		it('scissors gets beaten by rock', function() {
-			expect(game.decideWinnerOf(scissors, rock)).toEqual("Rock")
+			expect(game.decideWinnerOf(scissors, rock)).toEqual("Computer wins!")
 		});
 
 		it('rock draws with rock', function() {
-			expect(game.decideWinnerOf(rock, rock)).toEqual("Draw")
+			expect(game.decideWinnerOf(rock, rock)).toEqual("Wow! it's a draw")
 		});
 
 		it('scissors draws with scissors', function() {
-			expect(game.decideWinnerOf(scissors, scissors)).toEqual("Draw")
+			expect(game.decideWinnerOf(scissors, scissors)).toEqual("Wow! it's a draw")
 		});
 
 		it('Scissors beats paper', function() {
-			expect(game.decideWinnerOf(scissors, paper)).toEqual("Scissors")
+			expect(game.decideWinnerOf(scissors, paper)).toEqual("You win!!!")
 		});
 
 		it('Paper gets beaten by scissors', function() {
-			expect(game.decideWinnerOf(paper, scissors)).toEqual("Scissors")
+			expect(game.decideWinnerOf(paper, scissors)).toEqual("Computer wins!")
 		});
 
 		it('paper draws with paper', function() {
-			expect(game.decideWinnerOf(paper, paper)).toEqual("Draw")
+			expect(game.decideWinnerOf(paper, paper)).toEqual("Wow! it's a draw")
 		});
 
 		it('Paper beats rock', function() {
-			expect(game.decideWinnerOf(paper, rock)).toEqual("Paper")
+			expect(game.decideWinnerOf(paper, rock)).toEqual("You win!!!")
 		});
 
 		it('Rock gets beaten by paper', function() {
-			expect(game.decideWinnerOf(rock, paper)).toEqual("Paper")
+			expect(game.decideWinnerOf(rock, paper)).toEqual("Computer wins!")
 		});
 	});
 
@@ -119,6 +117,7 @@ describe('Computer to be able to choose a random gesture', function() {
 		});
 
 });
+
 
 
 

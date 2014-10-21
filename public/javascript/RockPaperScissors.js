@@ -26,11 +26,20 @@ function Scissors() {
 
 RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 	if(gestureOne.type === gestureTwo.type)
-		return "Draw";
+		return this.winningMessage("Draw");
 	else if (gestureOne.beats === gestureTwo.type)
-			return gestureOne.type;
+			return this.winningMessage("Player");
 	else 
-			return gestureTwo.type;
+			return this.winningMessage("Computer");
+};
+
+RockPaperScissors.prototype.winningMessage = function(result) {
+	if(result === "Draw") return  "Wow! it's a draw";
+	if(result === "Player") return "You win!!!";
+	if(result === "Computer") return "Computer wins!";
+
+
+
 };
 
 Player.prototype.choiceToFunction = function(gesture) {
@@ -45,27 +54,7 @@ Computer.prototype.getComputerGesture = function() {
 
 };
 
-// var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
-// var pickAFruit = function () {
-// var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
-// return todaysFruit;
-// var item = items[Math.floor(Math.random()*items.length)];
 
-// else if (gestureOne.type === "Rock") 
-// 			return gestureOne.type;
-// 	else 
-// 		return gestureTwo.type;
-
-//def vesus
-//	other === rock draw
-//	other === paper paper
-//	rock
-//end
-
-//return choiceOne.versus(choiceTwo)
-
-//function.Rules() {
-//foo = { 'Rock' : 'Scissors' }
 
 
 
