@@ -5,6 +5,13 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 400;
+	font-size: 3em;
+	text-align: center;
+}
+
 img {
 	opacity: 0.5;
 	cursor: pointer;
