@@ -101,6 +101,17 @@ describe('Player playing rock, paper, scissors', function() {
 
 	});
 
+describe('Computer to be able to choose a random gesture', function() {
+
+		it('should have three gestures to be able to pick from', function() {
+			computer = new Computer
+			expect(computer.gestures.length).toEqual(3)
+		});
+
+
+
+});
+
 
 
 

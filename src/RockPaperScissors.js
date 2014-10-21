@@ -4,8 +4,10 @@ function Player() {
 	this.choice = null
 };
 
+function Computer() {
+	this.gestures = [ new Rock, new Paper, new Scissors]
 
-
+};
 
 function Rock() {
 	this.type = "Rock";
