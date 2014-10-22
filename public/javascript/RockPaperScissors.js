@@ -50,7 +50,7 @@ Player.prototype.choiceToFunction = function(gesture) {
 
 Computer.prototype.getComputerGesture = function() {
 	this.chosenGesture = this.gestures[Math.floor(Math.random() * this.gestures.length)]
-	return this.chosenGestures;
+	return this.chosenGesture	;
 
 };
 
