@@ -1,5 +1,3 @@
-
-
 $('img').on('click', function() {
 	var game = new RockPaperScissors
 	var player = new Player

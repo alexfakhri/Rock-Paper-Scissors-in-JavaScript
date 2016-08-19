@@ -21,7 +21,7 @@ function Paper() {
 
 function Scissors() {
 	this.type = "Scissors";
-	this.beats = "Paper"; 
+	this.beats = "Paper";
 };
 
 RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
@@ -29,7 +29,7 @@ RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 		return this.winningMessage("Draw");
 	else if (gestureOne.beats === gestureTwo.type)
 			return this.winningMessage("Player");
-	else 
+	else
 			return this.winningMessage("Computer");
 };
 
@@ -37,9 +37,6 @@ RockPaperScissors.prototype.winningMessage = function(result) {
 	if(result === "Draw") return  "Wow! it's a draw";
 	if(result === "Player") return "You win!!!";
 	if(result === "Computer") return "Computer wins!";
-
-
-
 };
 
 Player.prototype.choiceToFunction = function(gesture) {
@@ -51,20 +48,4 @@ Player.prototype.choiceToFunction = function(gesture) {
 Computer.prototype.getComputerGesture = function() {
 	this.chosenGesture = this.gestures[Math.floor(Math.random() * this.gestures.length)]
 	return this.chosenGesture	;
-
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
